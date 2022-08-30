@@ -287,14 +287,24 @@
   }
 }
 .popularCourse {
+  .card {
+    border-radius: 25px;
+    margin-bottom: 16px;
+    height: 451px;
+  }
   .card-body {
     padding-left: 32px;
     padding-right: 32px;
+    @include media-breakpoint-up(lg) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
 
     .card-title {
-      h3 {
-        font-size: $h5-font-size;
+      .frontend {
+        font-size: $font-size-base;
         font-weight: bold;
+        margin-top: 36px;
       }
       h4 {
         color: #62db54;
@@ -308,7 +318,7 @@
 }
 
 .popularCourse {
-  .card-footer {
+  .card-body {
     span {
       font-size: $font-size-base;
     }
@@ -316,6 +326,15 @@
       font-family: "Azeret Mono";
       font-size: $h1-font-size;
       font-weight: bold;
+    }
+  }
+  .allCourseBtn {
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 48px;
+      padding: 8px 32px;
     }
   }
 }
