@@ -16,22 +16,22 @@ const datepicker = new Datepicker(elem, {
 
 //index footer swiper
 // <!-- Initialize Swiper -->
-
+// Swiper
 const swiper = new Swiper(".swiper", {
+  // Optional parameters
   effect: "fade",
-  loop: true,
-  // 分頁
+  fadeEffect: {
+    crossFade: true,
+  },
+
+  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
   },
-  // 左右箭頭
+
+  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-  // 滾動條
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
   },
 });

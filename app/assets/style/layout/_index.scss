@@ -166,6 +166,7 @@
       left: calc(50% - 32px);
     }
   }
+
   .procedure-card {
     @include media-breakpoint-up(md) {
       height: 200px;
@@ -275,6 +276,12 @@
   .card {
     background-color: $secondary;
     color: white;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid $primary;
+      cursor: pointer;
+    }
+
     .card-header {
       margin-top: 24px;
       border: none;
@@ -339,51 +346,331 @@
   }
 }
 
-// review
-.swiper-slide {
-  width: 350px;
-}
-.swiper-img {
-  width: calc(100% - 5px);
-  height: 213px;
-  object-fit: cover; // 防止圖片變形
-  border-radius: 24px;
-  left: 5px;
-}
-.swiper-img {
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #97c22b;
-    border-radius: 24px;
-    left: -10px;
-    top: 10px;
-    // z-index: -1;
+//feature2特色
+.bg-clip {
+  background-color: #1c1c1c90;
+  &:hover {
+    opacity: 0;
   }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-
-.review-text {
-  margin-top: 48px;
-
-  padding: 24px;
-  border-radius: 16px 16px 16px 0;
-  background-color: #ffffff;
-  color: #494755;
-  h4 {
-    font-size: $h6-font-size;
-    font-weight: bold;
+.feature2-card {
+  text-align: center;
+  span {
+    margin-top: 42px;
+    color: $primary;
+    font-size: 28px;
+  }
+  h2 {
+    margin-top: 18px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 80px;
+      margin-bottom: 48px;
+    }
+    margin-bottom: 32px;
+    line-height: 40px;
+    font-size: $h3-font-size;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding-bottom: 16px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: #62db54;
+      bottom: 0;
+      left: calc(50% - 32px);
+    }
   }
   p {
-    font-size: $font-size-base;
+    font-size: $h6-font-size;
+    margin-bottom: 0;
   }
 }
-.review-img {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  left: 238px;
-  top: -36px;
+.feature2-card-bg1 {
+  background-image: url("../images/info01.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feature2-card-bg2 {
+  background-image: url("../images/info02.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feature2-card-bg3 {
+  background-image: url("../images/info03.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feature2-card-bg4 {
+  background-image: url("../images/info04.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//article文章分享
+.article {
+  background-color: #1c1c1c;
+  h2 {
+    margin-top: 40px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 80px;
+      margin-bottom: 48px;
+    }
+    margin-bottom: 40px;
+    line-height: 40px;
+    font-size: $h3-font-size;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding-bottom: 16px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: #62db54;
+      bottom: 0;
+      left: calc(50% - 25px);
+    }
+  }
+  .card {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: none;
+    padding: 32px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 80px;
+    }
+    .card-body {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 24px;
+      .moreBtn {
+        a {
+          display: block;
+          font-size: $h6-font-size;
+          font-family: "Azeret Mono";
+          color: $primary;
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+.article {
+  .card-title {
+    font-size: $h6-font-size;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+}
+
+//參考hex每日任務
+.squareRounded {
+  display: none;
+  width: 32px;
+  height: 32px;
+  &-topLeft {
+    border-top: 1px solid #62db54;
+    border-left: 1px solid #62db54;
+    border-top-left-radius: 10px;
+  }
+  &-topRight {
+    border-top: 1px solid #62db54;
+    border-right: 1px solid #62db54;
+    border-top-right-radius: 10px;
+  }
+  &-bottomLeft {
+    border-bottom: 1px solid #62db54;
+    border-left: 1px solid #62db54;
+    border-bottom-left-radius: 10px;
+  }
+  &-bottomRight {
+    border-bottom: 1px solid #62db54;
+    border-right: 1px solid #62db54;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.card:hover {
+  .squareRounded {
+    display: block;
+  }
+}
+
+// review
+.reviews {
+  h2 {
+    margin-top: 40px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 80px;
+      margin-bottom: 48px;
+    }
+    margin-bottom: 40px;
+    line-height: 40px;
+    font-size: $h3-font-size;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding-bottom: 16px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: #62db54;
+      bottom: 0;
+      left: calc(50% - 25px);
+    }
+  }
+}
+
+//參考老師的每日任務解答
+// reviews區塊背景
+.reviews {
+  background-image: url("../images/bg_share.jpeg");
+  height: 733px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+  @include media-breakpoint-up(lg) {
+    height: auto;
+  }
+}
+
+// 輪播整體寬高
+.swiper {
+  width: 100%;
+  height: 429px;
+  @include media-breakpoint-up(lg) {
+    height: auto;
+  }
+  //left圖片位置
+  &-img {
+    top: 0;
+    left: 10px;
+    width: 60%;
+    height: 90%;
+    border-radius: 24px;
+    position: absolute;
+    // 上面圖片後面的灰框框
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #7c7e77;
+      border-radius: 24px;
+      left: -10px;
+      top: 10px;
+      z-index: -1;
+      @include media-breakpoint-up(lg) {
+        left: -5px;
+        top: 5px;
+      }
+    }
+    //left圖片大小樣式
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      width: calc(100% - 5px);
+      height: 213px;
+      left: 5px;
+      margin-bottom: 40px;
+    }
+  }
+
+  // right卡片區塊大小位置
+  .card {
+    width: 45%;
+    padding: 32px;
+    border-radius: 24px 24px 24px 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    h3 {
+      font-size: 18px;
+    }
+    // 圓頭像大小位置
+    &-img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      right: 32px;
+      bottom: 100%;
+      transform: translateY(50%);
+      @include media-breakpoint-up(lg) {
+        width: 80px;
+        height: 80px;
+        right: 24px;
+        top: -30px;
+        bottom: auto;
+        transform: none;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      width: 100%;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    content: "";
+  }
+
+  // 左右箭頭位置大小顏色設定
+  &-button-next,
+  &-button-prev {
+    position: unset;
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+    color: #62db54;
+  }
+
+  // 綠色點點分頁位置
+  .swiper-pagination {
+    position: unset;
+    width: auto;
+    // 綠色點點
+    .swiper-pagination-bullet {
+      background-color: #62db54;
+      opacity: initial;
+      &-active {
+        width: 16px;
+        border-radius: 100px;
+      }
+    }
+  }
+
+  &-buttons {
+    bottom: 0;
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 10;
+    position: absolute;
+    @include media-breakpoint-up(lg) {
+      position: initial;
+      transform: none;
+    }
+  }
 }
