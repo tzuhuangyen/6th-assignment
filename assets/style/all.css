@@ -1,7 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0";
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
 @import "https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
 @import "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css";
+@import "https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css";
 /*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -13899,7 +13901,6 @@ header .container {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 80px 0;
 }
 
 @media (min-width: 992px) {
@@ -14061,18 +14062,44 @@ header .container {
 }
 
 .joinInUs {
-  margin-top: 100px;
+  background-color: #000000;
 }
 
-.joinInUs span {
+.joinInUs .card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #2d2d2d;
+  border-radius: 24px;
+}
+
+@media (min-width: 992px) {
+  .joinInUs .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 48px;
+  }
+}
+
+.joinInUs .card span {
   margin-top: 40px;
   font-size: 100px;
 }
 
-.joinInUs .card {
-  background-color: #2d2d2d;
-  margin-bottom: 38px;
-  border-radius: 24px;
+@media (min-width: 992px) {
+  .joinInUs .card span {
+    margin: 0;
+  }
 }
 
 .joinInUs .card .card-title {
@@ -14080,20 +14107,202 @@ header .container {
   font-weight: bold;
 }
 
-.joinInUs .card .card-body .bookBtn {
+@media (min-width: 992px) {
+  .joinInUs .card .card-body {
+    text-align: start;
+    margin-left: 48px;
+  }
+}
+
+.joinInUs .bookBtn {
   border: 1px solid white;
   color: white;
   padding: 8px 32px;
+  margin-bottom: 40px;
 }
 
-.joinInUs .card .card-body .bookBtn:hover {
+.joinInUs .bookBtn:hover {
   cursor: pointer;
   border: 1px solid #62db54;
   color: #62db54;
 }
 
+@media (min-width: 992px) {
+  .joinInUs .bookBtn {
+    margin-bottom: 0;
+  }
+}
+
 body {
-  background-color: #1c1c1c;
+  background-color: #000000;
+}
+
+.procedure {
+  margin-top: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .procedure {
+    margin-top: 0;
+  }
+}
+
+.procedure .procedureBg {
+  background-color: #000000;
+}
+
+@media (min-width: 768px) {
+  .procedure .procedureBg {
+    background-color: #1c1c1c;
+    margin-top: 60px;
+  }
+}
+
+.procedure .timeline {
+  position: relative;
+}
+
+.procedure .timeline::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #c1c1c1;
+}
+
+@media (min-width: 992px) {
+  .procedure .timeline::after {
+    top: 89px;
+  }
+}
+
+.procedure .timeline-pointer {
+  position: relative;
+  color: #c1c1c1;
+}
+
+.procedure .timeline-pointer p {
+  padding-top: 24px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.procedure .timeline-pointer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c1c1c1;
+  border-radius: 50%;
+  background-color: #2d2d2d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.procedure .timeline-pointer.step-1::before {
+  content: "1";
+}
+
+.procedure .timeline-pointer.step-2::before {
+  content: "2";
+}
+
+.procedure .timeline-pointer.step-3::before {
+  content: "3";
+}
+
+.procedure .timeline-pointer.active {
+  color: #62db54;
+}
+
+.procedure .timeline-pointer.active::before {
+  color: #ffffff;
+  background-color: #62db54;
+  border-color: #62db54;
+}
+
+.courseInfo {
+  color: #ffffff;
+  text-align: center;
+  padding: 24px;
+  background-color: #2d2d2d;
+}
+
+@media (min-width: 768px) {
+  .courseInfo {
+    padding: 48px 32px;
+  }
+}
+
+.courseInfo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.courseInfo h3, .courseInfo .h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .courseInfo h3, .courseInfo .h3 {
+    font-size: 1.125rem;
+  }
+}
+
+.courseInfo span {
+  color: #62db54;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.courseInfo p {
+  font-size: 1rem;
+  text-align: start;
+}
+
+.payMethod {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.payMethod h3, .payMethod .h3 {
+  color: #ffffff;
+  font-size: 1.125rem;
+}
+
+.payMethod .payBtn {
+  padding: 16px;
+  color: white;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 input {

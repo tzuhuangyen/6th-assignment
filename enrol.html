@@ -1,15 +1,213 @@
-報名的立即預約按鈕漸層顏色
-<button class="btn bg-gradient text-white border-0">立即預約</button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>6th assignment</title>
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
 
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <input
-        type="text"
-        placeholder="請選擇日期"
-        name="datepicker"
-        class="form-control"
-      />
+  <body>
+    <header class="fixed-top">
+      <div class="container">
+        <!--logo+menuBtn+dropdown-->
+        <div class="d-flex justify-content-between align-items-center">
+           <!-- //logo/ -->
+            <div class="logo">
+            <img src="./assets/images/logo2.svg" alt="logo" /><a href="#"></a>
+            </div>
+         
+           <!-- nav mobile -->
+           <div class="d-md-none"> 
+              <!-- nav menu btn -->
+              <div class="menuBtn"> 
+                <span class="material-symbols-rounded"> drag_handle </span>
+               </div>   
+              
+             <!-- dropdown menu -->
+            <ul class="dropdown list-unstyled">
+              <li><a href="./index.html">首頁</a></li>
+              <li><a href="#">門市據點</a></li>
+              <li >
+                <a href="./enrol.html" class="d-flex align-items-center justify-content-center">
+                   <span class="material-symbols-rounded"> account_circle </span>
+                   <span>登入</span>
+                </a>
+              </li>
+         
+            </ul>
+           </div>
+          <!-- nav md -->
+          <div class="d-none d-md-block">
+            <ul class="nav d-flex justify-content-between align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">課程介紹</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-center align-items-center" href="./enrol.html"
+                  ><span class="material-symbols-rounded"> account_circle </span
+                  ><span>登入</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </header>
+
+    
+<!-- 付款進度條 -->
+<section class="procedure">
+    <div class="procedureBg pt-md-4 pb-md-3">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-9 col-md-7 timeline">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3 col-md-5">
+            <div class="timeline-pointer text-center step-1 active">
+              <p>課程報名</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="timeline-pointer text-center step-2">
+              <p>信用卡付款</p>
+            </div>
+          </div>
+          <div class="col-3 col-md-5">
+            <div class="timeline-pointer text-center step-3">
+              <p>付款成功</p>
+            </div> 
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- 課程報名系統 -->
+<section class="enrol">
+  <div class="container">
+    <div class="row">
+      <!-- 老師課程訊息 -->
+      <div class="col-md-4">
+        <div class="courseInfo">
+          <img src="./assets/images/teacher01.jpeg" alt="" />
+          <h3>2022 Python 全攻略｜從入門到實務</h3>
+          <span>前端語言</span>
+          <p>
+            帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的
+            HTML 語法出發。
+          </p>
+        </div>
+      </div>
+      <!-- 付款方式 -->
+      <h2>課程報名</h2>
+      <h3>選擇付款方式</h3>
+      <div class="col-md-8">
+        <ul class="payMethod list-unstyled d-flex">
+          <li>
+            <div class="payBtn">信用卡付款</div>
+          </li>
+          <li>
+            <div class="payBtn">超商繳款</div>
+          </li>
+          <li>
+            <div class="payBtn">ATM轉帳</div>
+          </li>
+          <li>
+            <div class="payBtn">12期分期付款</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <!-- 訂單資訊 -->
+      <div class="orderInfo">
+        <h3>訂單資訊</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="InputName" class="form-label">姓名</label>
+            <input
+              type="text"
+              class="form-control"
+              id="InputName"
+              placeholder="請輸入姓名"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="InputPhone" class="form-label"> 電話</label>
+            <input
+              type="text"
+              class="form-control"
+              id="InputPhone"
+              placeholder="請輸入電話"
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail4"
+              placeholder="請輸入Email"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="course">課程</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected></option>
+              <option value="1">10堂50分鐘</option>
+              <option value="2">20堂500分鐘</option>
+              <option value="3">30堂1500分鐘</option>
+            </select>
+          </div>
+          <div class="col-md-6 mt-2">
+            <label for="bookDate">想預約的日期</label>
+              <input
+                    type="text"
+                    placeholder="請選擇日期"
+                    name="datepicker"
+                    class="form-control"
+                    id="bookDate"
+                  />
+          </div>
+          <div class="col-md-12">
+            <label for="inputAdd" class="form-label">上課地點</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAdd"
+              placeholder="請輸入上課地點"
+            />
+          </div>
+        </div>
+        <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-md-between align-md-items-center">
+          <li class="text-white fs-6 m-0">NT$1600</li>
+          <li><button class="btn bg-gradient text-white border-0">
+            前往結賬
+          </button></li>
+        </ul>
+        
+      </div>
+    </div>
+
+</section>
+
+
+    <footer class="footer text-center">Coding Home © 2022 All Rights Reserved</footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+
+                 
+  </body>
+</html>
