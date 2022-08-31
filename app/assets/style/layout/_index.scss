@@ -542,7 +542,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 80px 0;
+
   @include media-breakpoint-up(lg) {
     height: auto;
   }
@@ -678,30 +678,50 @@
 
 //join in us
 .joinInUs {
-  margin-top: 100px;
-  span {
-    margin-top: 40px;
-    font-size: 100px;
-  }
+  background-color: #000000;
+
   .card {
+    margin-top: 40px;
+    margin-bottom: 40px;
     background-color: $secondary;
-    margin-bottom: 38px;
     border-radius: 24px;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 48px;
+    }
+    span {
+      margin-top: 40px;
+      font-size: 100px;
+      @include media-breakpoint-up(lg) {
+        margin: 0;
+      }
+    }
     .card-title {
       font-size: $h3-font-size;
       font-weight: bold;
     }
     .card-body {
-      .bookBtn {
-        border: 1px solid white;
-        color: white;
-        padding: 8px 32px;
-        &:hover {
-          cursor: pointer;
-          border: 1px solid $primary;
-          color: $primary;
-        }
+      @include media-breakpoint-up(lg) {
+        text-align: start;
+        margin-left: 48px;
       }
+    }
+  }
+  .bookBtn {
+    border: 1px solid white;
+    color: white;
+    padding: 8px 32px;
+    margin-bottom: 40px;
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $primary;
+      color: $primary;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
     }
   }
 }
