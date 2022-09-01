@@ -100,6 +100,11 @@
     }
   }
 
+  .card:hover .material-symbols-outlined {
+    @include gradient-text;
+  }
+  // 將 .feature .card span:hover 樣式移至這邊就可以了
+
   .card {
     background: #2d2d2d;
     padding-top: 40px;
@@ -114,18 +119,12 @@
       margin-bottom: 80px;
 
       border: 1px solid transparent;
-      &:hover {
-        background: #202020;
-        border: 1px solid #62db54;
-      }
     }
     span {
       font-size: 40px;
       margin-bottom: 36px;
       display: block;
-      &:hover {
-        @include gradient-text;
-      }
+
       @include media-breakpoint-up(lg) {
         margin-bottom: 28px;
       }
@@ -143,11 +142,14 @@
 
 //預期上課流程 procedure
 .procedure {
+  background-color: #1c1c1c;
+  padding-bottom: 0;
   h2 {
     margin-top: 40px;
     @include media-breakpoint-up(lg) {
       margin-top: 80px;
       margin-bottom: 48px;
+      font-size: $h2-font-size;
     }
     margin-bottom: 24px;
     line-height: 40px;
@@ -185,7 +187,8 @@
   .procedure-text {
     border: 1px solid #ffffff;
     border-radius: 12px;
-    padding: 48px;
+    padding: 48px 24px 48px 48px;
+
     color: #ffffff;
     h3 {
       font-size: $h3-font-size;
@@ -194,7 +197,6 @@
     }
     p {
       font-size: $h6-font-size;
-      line-height: 26px;
     }
   }
 }
@@ -209,10 +211,11 @@
 
 //type of language
 .type {
+  background-color: #2d2d2d;
   h2 {
-    margin-top: 40px;
+    padding-top: 40px;
     @include media-breakpoint-up(lg) {
-      margin-top: 80px;
+      padding-top: 80px;
       margin-bottom: 48px;
     }
     margin-bottom: 24px;
@@ -276,59 +279,56 @@
   .card {
     background-color: $secondary;
     color: white;
+    border-radius: 25px;
+    margin-bottom: 16px;
     border: 1px solid transparent;
     &:hover {
       border: 1px solid $primary;
       cursor: pointer;
     }
-
-    .card-header {
-      margin-top: 24px;
-      border: none;
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-      }
-    }
   }
 }
 .popularCourse {
-  .card {
-    border-radius: 25px;
-    margin-bottom: 16px;
-    height: 451px;
+  .card-header {
+    margin-top: 24px;
+    border: none;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
   }
   .card-body {
     padding-left: 32px;
     padding-right: 32px;
     @include media-breakpoint-up(lg) {
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    span {
+      font-size: $font-size-base;
     }
 
     .card-title {
-      .frontend {
+      h3 {
         font-size: $font-size-base;
         font-weight: bold;
-        margin-top: 36px;
+        @include media-breakpoint-up(md) {
+          font-size: $h5-font-size;
+        }
       }
+
       h4 {
         color: #62db54;
         font-size: $font-size-base;
       }
     }
-    .card-text {
-      border-bottom: 1px solid #c1c1c1;
-    }
   }
 }
 
 .popularCourse {
-  .card-body {
-    span {
-      font-size: $font-size-base;
-    }
+  .card-footer {
+    border-top: 1px solid #c1c1c1;
     .coursePrice {
       font-family: "Azeret Mono";
       font-size: $h1-font-size;
@@ -359,7 +359,12 @@
   right: 0;
 }
 .feature2-card {
-  text-align: center;
+  .feature2-card-text {
+    @include media-breakpoint-up(md) {
+      padding-right: 48px;
+      padding-left: 48px;
+    }
+  }
   span {
     margin-top: 42px;
     color: $primary;
@@ -368,8 +373,8 @@
   h2 {
     margin-top: 18px;
     @include media-breakpoint-up(lg) {
-      margin-top: 80px;
-      margin-bottom: 48px;
+      margin-top: 18px;
+      margin-bottom: 32px;
     }
     margin-bottom: 32px;
     line-height: 40px;
@@ -386,41 +391,47 @@
       background-color: #62db54;
       bottom: 0;
       left: calc(50% - 32px);
+      @include media-breakpoint-up(md) {
+        left: calc(50% - 105px);
+      }
     }
-  }
-  p {
-    font-size: $h6-font-size;
-    margin-bottom: 0;
+    p {
+      font-size: $h6-font-size;
+      margin-bottom: 0;
+    }
   }
 }
 .feature2-card-bg1 {
   background-image: url("../images/info01.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 .feature2-card-bg2 {
   background-image: url("../images/info02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 .feature2-card-bg3 {
   background-image: url("../images/info03.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 .feature2-card-bg4 {
   background-image: url("../images/info04.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 
 //article文章分享
 .article {
   background-color: #1c1c1c;
   h2 {
-    margin-top: 40px;
     @include media-breakpoint-up(lg) {
-      margin-top: 80px;
+      padding-top: 80px;
       margin-bottom: 48px;
     }
     margin-bottom: 40px;
