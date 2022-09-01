@@ -13414,6 +13414,17 @@ header .container {
   left: calc(50% - 32px);
 }
 
+.feature .card:hover .material-symbols-outlined {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#62db54), to(#09acf5));
+  background-image: -o-linear-gradient(top, #62db54, #09acf5);
+  background-image: linear-gradient(180deg, #62db54, #09acf5);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
 .feature .card {
   background: #2d2d2d;
   padding-top: 40px;
@@ -13432,27 +13443,12 @@ header .container {
     margin-bottom: 80px;
     border: 1px solid transparent;
   }
-  .feature .card:hover {
-    background: #202020;
-    border: 1px solid #62db54;
-  }
 }
 
 .feature .card span {
   font-size: 40px;
   margin-bottom: 36px;
   display: block;
-}
-
-.feature .card span:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#62db54), to(#09acf5));
-  background-image: -o-linear-gradient(top, #62db54, #09acf5);
-  background-image: linear-gradient(180deg, #62db54, #09acf5);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
 }
 
 @media (min-width: 992px) {
@@ -13471,6 +13467,11 @@ header .container {
   margin-bottom: 40px;
 }
 
+.procedure {
+  background-color: #1c1c1c;
+  padding-bottom: 0;
+}
+
 .procedure h2, .procedure .h2 {
   margin-top: 40px;
   margin-bottom: 24px;
@@ -13486,6 +13487,7 @@ header .container {
   .procedure h2, .procedure .h2 {
     margin-top: 80px;
     margin-bottom: 48px;
+    font-size: 1.75rem;
   }
 }
 
@@ -13518,7 +13520,7 @@ header .container {
 .procedure .procedure-text {
   border: 1px solid #ffffff;
   border-radius: 12px;
-  padding: 48px;
+  padding: 48px 24px 48px 48px;
   color: #ffffff;
 }
 
@@ -13530,7 +13532,6 @@ header .container {
 
 .procedure .procedure-text p {
   font-size: 1.125rem;
-  line-height: 26px;
 }
 
 @media (min-width: 992px) {
@@ -13539,8 +13540,12 @@ header .container {
   }
 }
 
+.type {
+  background-color: #2d2d2d;
+}
+
 .type h2, .type .h2 {
-  margin-top: 40px;
+  padding-top: 40px;
   margin-bottom: 24px;
   line-height: 40px;
   font-size: 1.5rem;
@@ -13552,7 +13557,7 @@ header .container {
 
 @media (min-width: 992px) {
   .type h2, .type .h2 {
-    margin-top: 80px;
+    padding-top: 80px;
     margin-bottom: 48px;
   }
 }
@@ -13610,6 +13615,8 @@ header .container {
 .popularCourse .card {
   background-color: #2d2d2d;
   color: white;
+  border-radius: 25px;
+  margin-bottom: 16px;
   border: 1px solid transparent;
 }
 
@@ -13618,21 +13625,15 @@ header .container {
   cursor: pointer;
 }
 
-.popularCourse .card .card-header {
+.popularCourse .card-header {
   margin-top: 24px;
   border: none;
 }
 
-.popularCourse .card .card-header img {
+.popularCourse .card-header img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-}
-
-.popularCourse .card {
-  border-radius: 25px;
-  margin-bottom: 16px;
-  height: 451px;
 }
 
 .popularCourse .card-body {
@@ -13642,15 +13643,24 @@ header .container {
 
 @media (min-width: 992px) {
   .popularCourse .card-body {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
-.popularCourse .card-body .card-title .frontend {
+.popularCourse .card-body span {
+  font-size: 1rem;
+}
+
+.popularCourse .card-body .card-title h3, .popularCourse .card-body .card-title .h3 {
   font-size: 1rem;
   font-weight: bold;
-  margin-top: 36px;
+}
+
+@media (min-width: 768px) {
+  .popularCourse .card-body .card-title h3, .popularCourse .card-body .card-title .h3 {
+    font-size: 1.25rem;
+  }
 }
 
 .popularCourse .card-body .card-title h4, .popularCourse .card-body .card-title .h4 {
@@ -13658,15 +13668,11 @@ header .container {
   font-size: 1rem;
 }
 
-.popularCourse .card-body .card-text {
-  border-bottom: 1px solid #c1c1c1;
+.popularCourse .card-footer {
+  border-top: 1px solid #c1c1c1;
 }
 
-.popularCourse .card-body span {
-  font-size: 1rem;
-}
-
-.popularCourse .card-body .coursePrice {
+.popularCourse .card-footer .coursePrice {
   font-family: "Azeret Mono";
   font-size: 2rem;
   font-weight: bold;
@@ -13698,8 +13704,11 @@ header .container {
   opacity: 0;
 }
 
-.feature2-card {
-  text-align: center;
+@media (min-width: 768px) {
+  .feature2-card .feature2-card-text {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
 }
 
 .feature2-card span {
@@ -13721,8 +13730,8 @@ header .container {
 
 @media (min-width: 992px) {
   .feature2-card h2, .feature2-card .h2 {
-    margin-top: 80px;
-    margin-bottom: 48px;
+    margin-top: 18px;
+    margin-bottom: 32px;
   }
 }
 
@@ -13736,7 +13745,13 @@ header .container {
   left: calc(50% - 32px);
 }
 
-.feature2-card p {
+@media (min-width: 768px) {
+  .feature2-card h2:before, .feature2-card .h2:before {
+    left: calc(50% - 105px);
+  }
+}
+
+.feature2-card h2 p, .feature2-card .h2 p {
   font-size: 1.125rem;
   margin-bottom: 0;
 }
@@ -13745,24 +13760,28 @@ header .container {
   background-image: url("../images/info01.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 
 .feature2-card-bg2 {
   background-image: url("../images/info02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 
 .feature2-card-bg3 {
   background-image: url("../images/info03.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 
 .feature2-card-bg4 {
   background-image: url("../images/info04.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 625px;
 }
 
 .article {
@@ -13770,7 +13789,6 @@ header .container {
 }
 
 .article h2, .article .h2 {
-  margin-top: 40px;
   margin-bottom: 40px;
   line-height: 40px;
   font-size: 1.5rem;
@@ -13782,7 +13800,7 @@ header .container {
 
 @media (min-width: 992px) {
   .article h2, .article .h2 {
-    margin-top: 80px;
+    padding-top: 80px;
     margin-bottom: 48px;
   }
 }
