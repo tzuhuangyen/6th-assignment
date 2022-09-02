@@ -2,7 +2,7 @@ body {
   background-color: #000000;
 }
 // 進度條
-.procedure {
+.process {
   margin-top: 70px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -10,7 +10,7 @@ body {
   @include media-breakpoint-up(md) {
     margin-top: 0;
   }
-  .procedureBg {
+  .processBg {
     background-color: #000000;
     @include media-breakpoint-up(md) {
       background-color: #1c1c1c;
@@ -27,7 +27,7 @@ body {
       position: absolute;
       top: 9px;
       @include media-breakpoint-up(lg) {
-        top: 89px;
+        top: 10px;
       }
       left: 0;
       right: 0;
@@ -79,13 +79,49 @@ body {
   }
 }
 
-// 報名系統
-// <!-- 老師課程訊息 -->
+// 課程報名系統
+.enrol {
+  h2 {
+    @include media-breakpoint-up(lg) {
+      font-size: $h3-font-size;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+}
+
+// <!-- 老師課程訊息 左 col-md-4 -->
 .courseInfo {
   color: #ffffff;
   text-align: center;
   padding: 24px;
   background-color: $secondary;
+  @include media-breakpoint-up(lg) {
+    margin-top: 265px;
+    margin-left: -10px;
+  }
+
+  p {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 170%;
+      right: 50%;
+      transform: rotate(90deg);
+      /*  三角  */
+      width: 0;
+      height: 0;
+      border-width: 12px 0 12px 12px;
+      border-style: solid;
+      border-color: transparent transparent transparent red;
+      @include media-breakpoint-up(lg) {
+        transform: rotate(0deg);
+        top: -76px;
+        left: 324px;
+      }
+    }
+  }
   @include media-breakpoint-up(md) {
     padding: 48px 32px;
   }
@@ -116,10 +152,28 @@ body {
   }
 }
 
+// 課程報名 付款方式 &訂單資訊"col-md-8
+.courseEnrol {
+  background-color: #1c1c1c;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 114px;
+    padding-right: 32px;
+    padding-bottom: 48px;
+    margin-bottom: 114px;
+    color: white;
+    h3 {
+      font-size: $h6-font-size;
+    }
+  }
+}
+
 // 付款方式
 .payMethod {
   flex-wrap: wrap;
-  justify-content: center;
+  @include media-breakpoint-up(lg) {
+    margin-right: 16px;
+  }
   h3 {
     color: #ffffff;
     font-size: $h6-font-size;
@@ -131,8 +185,30 @@ body {
     border-radius: 8px;
     margin-right: 8px;
     margin-bottom: 8px;
+    &:hover {
+      border: 1px solid $primary;
+      color: $primary;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 32px;
+    }
   }
 }
+
+//orderInfo
+.orderInfo {
+  h3 {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 24px;
+    }
+  }
+  .btn {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 input {
   padding: 8px 16px;
 }
