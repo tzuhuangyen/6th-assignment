@@ -110,6 +110,7 @@
     padding-top: 40px;
     margin-bottom: 24px;
     border-radius: 16px;
+    border: 1px solid #ffffff;
     &:hover {
       background: #202020;
       border: 1px solid #62db54;
@@ -167,8 +168,11 @@
       left: calc(50% - 32px);
     }
   }
-
-  .procedure-title {
+  .card {
+    background-color: #1c1c1c;
+    height: calc(100% - 3rem); /* 100% 減去 my-5 */
+  }
+  .card-title {
     color: $primary;
     font-size: $font-size-lg;
 
@@ -178,7 +182,7 @@
     padding-left: 8px;
     padding-right: 8px;
   }
-  .procedure-text {
+  .card-text {
     border: 1px solid #ffffff;
     border-radius: 12px;
     padding: 48px 24px 48px 48px;
@@ -302,11 +306,8 @@
     padding-left: 32px;
     padding-right: 32px;
     @include media-breakpoint-up(lg) {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-    span {
-      font-size: $font-size-base;
+      padding-left: 24px;
+      padding-right: 24px;
     }
 
     .card-title {
@@ -328,22 +329,28 @@
 //card-footer
 .popularCourse {
   .card-footer {
-    border-top: 1px solid #c1c1c1;
     padding: 16px 32px;
+    border-top: 1px solid #c1c1c1;
+    @include media-breakpoint-up(lg) {
+      padding: 16px 24px;
+    }
+    span {
+      font-size: $font-size-base;
+    }
     .coursePrice {
       font-family: "Azeret Mono";
       font-size: $h1-font-size;
       font-weight: bold;
     }
   }
-  .allCourseBtn {
-    &:hover {
-      transform: scale(1.1);
-    }
-    @include media-breakpoint-up(lg) {
-      margin-top: 48px;
-      padding: 8px 32px;
-    }
+}
+.allCourseBtn {
+  &:hover {
+    transform: scale(1.1);
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 48px;
+    padding: 8px 32px;
   }
 }
 
@@ -351,7 +358,7 @@
 .bg-clip {
   background-color: #1c1c1c90;
   &:hover {
-    opacity: 0;
+    opacity: 10%;
   }
   position: absolute;
   top: 0;
@@ -371,6 +378,11 @@
     @include media-breakpoint-up(md) {
       padding-right: 48px;
       padding-left: 48px;
+    }
+    .text-hover-black {
+      &:hover {
+        color: #000000;
+      }
     }
   }
   span {
@@ -687,7 +699,7 @@
 
 .swiper-control {
   bottom: 0;
-  left: 50%;
+  left: 50px;
 }
 // 綠色點點分頁位置
 .swiper-pagination {
