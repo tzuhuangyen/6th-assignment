@@ -13432,6 +13432,7 @@ header .container {
   padding-top: 40px;
   margin-bottom: 24px;
   border-radius: 16px;
+  border: 1px solid #ffffff;
 }
 
 .feature .card:hover {
@@ -13503,7 +13504,13 @@ header .container {
   left: calc(50% - 32px);
 }
 
-.procedure .procedure-title {
+.procedure .card {
+  background-color: #1c1c1c;
+  height: calc(100% - 3rem);
+  /* 100% 減去 my-5 */
+}
+
+.procedure .card-title {
   color: #62db54;
   font-size: 3rem;
   top: -36px;
@@ -13513,7 +13520,7 @@ header .container {
   padding-right: 8px;
 }
 
-.procedure .procedure-text {
+.procedure .card-text {
   border: 1px solid #ffffff;
   border-radius: 12px;
   padding: 48px 24px 48px 48px;
@@ -13521,18 +13528,18 @@ header .container {
 }
 
 @media (min-width: 768px) {
-  .procedure .procedure-text {
+  .procedure .card-text {
     height: 100%;
   }
 }
 
-.procedure .procedure-text h3, .procedure .procedure-text .h3 {
+.procedure .card-text h3, .procedure .card-text .h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 16px;
 }
 
-.procedure .procedure-text p {
+.procedure .card-text p {
   font-size: 1.125rem;
 }
 
@@ -13644,13 +13651,9 @@ header .container {
 
 @media (min-width: 992px) {
   .popularCourse .card-body {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
-}
-
-.popularCourse .card-body span {
-  font-size: 1rem;
 }
 
 .popularCourse .card-body .card-title h3, .popularCourse .card-body .card-title .h3 {
@@ -13670,8 +13673,18 @@ header .container {
 }
 
 .popularCourse .card-footer {
-  border-top: 1px solid #c1c1c1;
   padding: 16px 32px;
+  border-top: 1px solid #c1c1c1;
+}
+
+@media (min-width: 992px) {
+  .popularCourse .card-footer {
+    padding: 16px 24px;
+  }
+}
+
+.popularCourse .card-footer span {
+  font-size: 1rem;
 }
 
 .popularCourse .card-footer .coursePrice {
@@ -13680,14 +13693,14 @@ header .container {
   font-weight: bold;
 }
 
-.popularCourse .allCourseBtn:hover {
+.allCourseBtn:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
 
 @media (min-width: 992px) {
-  .popularCourse .allCourseBtn {
+  .allCourseBtn {
     margin-top: 48px;
     padding: 8px 32px;
   }
@@ -13703,7 +13716,7 @@ header .container {
 }
 
 .bg-clip:hover {
-  opacity: 0;
+  opacity: 10%;
 }
 
 .feature2 ul {
@@ -13719,6 +13732,10 @@ header .container {
     padding-right: 48px;
     padding-left: 48px;
   }
+}
+
+.feature2-card .feature2-card-text .text-hover-black:hover {
+  color: #000000;
 }
 
 .feature2-card span {
@@ -14047,9 +14064,14 @@ header .container {
   color: #62db54;
 }
 
+.swiper-control {
+  bottom: 0;
+  left: 50px;
+}
+
 .swiper-pagination {
   position: unset;
-  width: auto;
+  width: auto !important;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -14262,42 +14284,6 @@ body {
   }
 }
 
-.courseInfo p {
-  position: relative;
-}
-
-.courseInfo p::after {
-  content: "";
-  position: absolute;
-  top: 170%;
-  right: 50%;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  /*  三角  */
-  width: 0;
-  height: 0;
-  border-width: 12px 0 12px 12px;
-  border-style: solid;
-  border-color: transparent transparent transparent red;
-}
-
-@media (min-width: 992px) {
-  .courseInfo p::after {
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
-    top: -76px;
-    left: 324px;
-  }
-}
-
-@media (min-width: 768px) {
-  .courseInfo {
-    padding: 48px 32px;
-  }
-}
-
 .courseInfo img {
   width: 100px;
   height: 100px;
@@ -14329,19 +14315,62 @@ body {
   text-align: start;
 }
 
-.courseEnrol {
-  background-color: #1c1c1c;
+.courseInfo::after {
+  content: "";
+  position: absolute;
+  right: calc(50%-12px);
+  bottom: -18px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  /*  三角  */
+  width: 0;
+  height: 0;
+  border-width: 12px 0 12px 12px;
+  border-style: solid;
+  border-color: transparent transparent transparent red;
+}
+
+@media (min-width: 768px) {
+  .courseInfo::after {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: calc(50%-12px);
+    left: 100%;
+    bottom: 185px;
+  }
+}
+
+@media (min-width: 768px) {
+  padding: 48px 32px;
+}
+
+@media (min-width: 768px) {
+  .courseEnrol {
+    margin-left: 40px;
+  }
 }
 
 @media (min-width: 992px) {
   .courseEnrol {
+    margin-left: -48px;
+  }
+}
+
+.courseEnrol .courseEnrolInfo {
+  background-color: #1c1c1c;
+}
+
+@media (min-width: 992px) {
+  .courseEnrol .courseEnrolInfo {
     padding-left: 114px;
     padding-right: 32px;
     padding-bottom: 48px;
     margin-bottom: 114px;
     color: white;
   }
-  .courseEnrol h3, .courseEnrol .h3 {
+  .courseEnrol .courseEnrolInfo h3, .courseEnrol .courseEnrolInfo .h3 {
     font-size: 1.125rem;
   }
 }
