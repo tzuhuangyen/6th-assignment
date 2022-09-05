@@ -685,10 +685,14 @@
   }
 }
 
+.swiper-control {
+  bottom: 0;
+  left: 50%;
+}
 // 綠色點點分頁位置
 .swiper-pagination {
   position: unset;
-  width: auto;
+  width: auto !important;
 
   // 綠色點點
   .swiper-pagination-bullet {
