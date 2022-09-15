@@ -14006,7 +14006,7 @@ header .container {
 
 .reviews .swiper-slide .card {
   padding: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 90px;
   border-radius: 24px 24px 24px 0;
   bottom: -70px;
   right: 0;
@@ -14065,8 +14065,23 @@ header .container {
 }
 
 .swiper-control {
-  bottom: 176px;
-  left: 150px;
+  position: absolute;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  bottom: -5px;
+  left: 35%;
+}
+
+@media (min-width: 768px) {
+  .swiper-control {
+    bottom: 30%;
+    left: 35%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 1;
+  }
 }
 
 .swiper-pagination {
@@ -14086,6 +14101,7 @@ header .container {
 
 .joinInUs {
   background-color: #000000;
+  margin-top: 100px;
 }
 
 .joinInUs .card {
