@@ -13180,6 +13180,15 @@ fieldset:disabled .btn {
   }
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -13220,12 +13229,24 @@ header {
   padding: 24px 12px;
 }
 
-header .logo {
-  width: 24px;
-  height: 24px;
+header h1 a, header .h1 a {
+  background-image: url("../images/logo2.svg");
+  background-repeat: no-repeat;
+  width: 175px;
+  height: 42px;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-header .logo:hover {
+@media (min-width: 992px) {
+  header h1 a, header .h1 a {
+    background-image: url("../images/logo.svg");
+  }
+}
+
+header h1:hover, header .h1:hover {
   cursor: pointer;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -13633,7 +13654,6 @@ header .container {
   background-color: #2d2d2d;
   color: white;
   border-radius: 25px;
-  max-width: 306px;
   border: 1px solid transparent;
 }
 
@@ -14353,7 +14373,7 @@ body {
   height: 0;
   border-width: 12px 0 12px 12px;
   border-style: solid;
-  border-color: transparent transparent transparent red;
+  border-color: transparent transparent transparent #2d2d2d;
 }
 
 @media (min-width: 768px) {
@@ -14385,6 +14405,13 @@ body {
 
 .courseEnrol .courseEnrolInfo {
   background-color: #1c1c1c;
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .courseEnrol .courseEnrolInfo {
+    padding: 48px 32px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -14405,24 +14432,18 @@ body {
       flex-wrap: wrap;
 }
 
-@media (min-width: 992px) {
-  .payMethod {
-    margin-right: 16px;
-  }
-}
-
 .payMethod h3, .payMethod .h3 {
   color: #ffffff;
   font-size: 1.125rem;
 }
 
 .payMethod .payBtn {
-  padding: 16px;
+  background-color: #1c1c1c;
+  padding: 16px 32px;
   color: white;
+  font-size: 16px;
   border: 1px solid #ffffff;
   border-radius: 8px;
-  margin-right: 8px;
-  margin-bottom: 8px;
 }
 
 .payMethod .payBtn:hover {
@@ -14453,6 +14474,7 @@ input {
 }
 
 .form-control,
+.form-label,
 .form-control:focus {
   border-color: #ffffff;
   background-color: transparent;
@@ -14469,6 +14491,11 @@ input {
   color: #000;
 }
 
+.datepicker-cell,
+.days-of-week .dow {
+  color: black;
+}
+
 footer {
   position: relative;
   background-color: #1a1a1a;
@@ -14483,24 +14510,6 @@ footer {
     padding-top: 24px;
     padding-bottom: 24px;
   }
-}
-
-footer:before {
-  position: absolute;
-  content: "";
-  border-bottom: 3px solid #62db54;
-  top: 0;
-  width: 50%;
-  left: 0%;
-}
-
-footer:after {
-  position: absolute;
-  content: "";
-  border-bottom: 3px solid #09ACF5;
-  top: 0;
-  width: 50%;
-  left: 50%;
 }
 
 /*# sourceMappingURL=all.css.map */
