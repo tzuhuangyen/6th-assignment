@@ -175,7 +175,8 @@
   .card-title {
     color: $primary;
     font-size: $font-size-lg;
-
+    font-family: "Azeret Mono";
+    font-weight: bold;
     top: -36px;
     left: 48px;
     background-color: #1c1c1c;
@@ -283,6 +284,7 @@
     background-color: $secondary;
     color: white;
     border-radius: 25px;
+    max-width: 306px;
 
     border: 1px solid transparent;
     &:hover {
