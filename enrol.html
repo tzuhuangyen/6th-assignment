@@ -108,34 +108,41 @@
         </div>
       </div>
       <!-- 付款方式 &訂單資訊 -->
-      <div class="courseEnrol col-12 col-lg-8">
+      <div class="courseEnrol mb-8 col-12 col-lg-8">
         <div class="courseEnrolInfo  ">
              <!-- 付款方式 -->
              <div>
-                 <h2 class="text-center m-0 text-white">課程報名</h2>
-                 <h3 class="mt-5 mb-3 text-white">選擇付款方式</h3>
-                 <div class="payMethod row text-white">
-                   <button class="payBtn col-6 col-lg-3 me-2 me-lg-3">
-                     信用卡付款
+                 <h2 class="text-center m-0 text-white mb-5">課程報名</h2>
+                 <h3 class="mb-3 text-white text-center text-lg-start">選擇付款方式</h3>
+                 <ul class="payMethod text-white d-flex  justify-content-center mb-6">
+                   <li class="me-2 me-lg-3">
+                    <button class="payBtn">
+                    信用卡付款
                    </button>
-                   <button class="payBtn col-6 col-lg-3 me-lg-3">
-                    超商繳款
-                  </button>
-                  <button class="payBtn col-6 col-lg-3 me-2 me-lg-3">
-                    ATM轉帳
-                  </button>
-                  <button class="payBtn col-6 col-md-3">
+                   </li>
+                   <li class="me-2 me-lg-3">
+                      <button class="payBtn">
+                      超商繳款
+                     </button>
+                   </li>
+                   <li class="me-2 me-lg-3">
+                    <button class="payBtn">
+                      ATM轉帳
+                   </button>
+                 </li>
+                 <li class="me-2 me-lg-3">
+                  <button class="payBtn">
                     12期分期付款
-                  </button>
-                   
-                 </div>
+                 </button>
+               </li>
+                
+                 </ul>
              </div>
-            <!-- 訂單資訊 -->
+             <!-- 訂單資訊 -->             
              <div class="orderInfo position-relative">
-             
-                 <h3>訂單資訊</h3>
+                 <h3 class="text-white text-center text-lg-start">訂單資訊</h3>
                   <div class="row">
-<div class="col-md-6 mb-lg-5 mb-3">
+                      <div class="col-md-6 mb-lg-5 mb-3">
 <label for="InputName" class="form-label">姓名</label>
 <input
   type="text"
@@ -143,17 +150,17 @@
   id="InputName"
   placeholder="請輸入姓名"
 />
-</div>
-<div class="col-md-6 mb-lg-5 mb-3">
-<label for="InputPhone" class="form-label"> 電話</label>
-<input
-  type="tel"
-  class="form-control"
-  id="InputPhone"
-  placeholder="請輸入電話"
-/>
-</div>
-<div class="col-md-12 mb-lg-5 mb-3">
+                      </div>
+                      <div class="col-md-6 mb-lg-5 mb-3">
+                      <label for="InputPhone" class="form-label"> 電話</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="InputPhone"
+                        placeholder="請輸入電話"
+                      />
+                      </div>
+                      <div class="col-md-12 mb-lg-5 mb-3">
 <label for="inputEmail4" class="form-label">Email</label>
 <input
   type="email"
@@ -161,8 +168,8 @@
   id="inputEmail4"
   placeholder="請輸入Email"
 />
-</div>
-<div class="col-md-6 mb-lg-5 mb-3">
+                      </div>
+                      <div class="col-md-6 mb-lg-5 mb-3">
 <label for="course">課程</label>
 <select class="form-select" aria-label="Default select example">
   <option selected></option>
@@ -170,8 +177,8 @@
   <option value="2">20堂500分鐘</option>
   <option value="3">30堂1500分鐘</option>
 </select>
-</div>
-<div class="col-md-6 mb-lg-5 mb-3">
+                      </div>
+                      <div class="col-md-6 mb-lg-5 mb-3">
 <label for="bookDate">想預約的日期</label>
   <input
         type="text"
@@ -180,8 +187,8 @@
         class="form-control"
         id="bookDate"
       />
-</div>
-<div class="col-md-12 mb-lg-5 mb-3">
+                      </div>
+                      <div class="col-md-12 mb-lg-5 mb-3">
 <label for="inputAdd" class="form-label">上課地點</label>
 <input
   type="text"
@@ -189,10 +196,11 @@
   id="inputAdd"
   placeholder="請輸入上課地點"
 />
-</div>
+                      </div>
                   </div>
+                  <!-- 總金額 -->
                   <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-md-between align-md-items-center">
-                  <li class="text-white fs-6 m-0">NT$1600</li>
+                  <li class="text-white fs-6 my-5">NT$1600</li>
                   <li><a class="btn bg-gradient text-white border-0">
                   前往結賬
                   </a></li>

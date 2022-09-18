@@ -14439,11 +14439,13 @@ body {
 
 .payMethod .payBtn {
   background-color: #1c1c1c;
-  padding: 16px 32px;
+  padding: 16px;
   color: white;
   font-size: 16px;
   border: 1px solid #ffffff;
   border-radius: 8px;
+  margin-bottom: 8px;
+  width: 140px;
 }
 
 .payMethod .payBtn:hover {
@@ -14453,7 +14455,9 @@ body {
 
 @media (min-width: 992px) {
   .payMethod .payBtn {
+    padding: 16px 32px;
     margin-bottom: 32px;
+    width: auto;
   }
 }
 
@@ -14461,6 +14465,11 @@ body {
   .orderInfo h3, .orderInfo .h3 {
     margin-bottom: 24px;
   }
+}
+
+.orderInfo .btn {
+  display: block;
+  padding: 8px 16px;
 }
 
 .orderInfo .btn:hover {
@@ -14471,6 +14480,10 @@ body {
 
 input {
   padding: 8px 16px;
+}
+
+label {
+  color: #c1c1c1;
 }
 
 .form-control,
