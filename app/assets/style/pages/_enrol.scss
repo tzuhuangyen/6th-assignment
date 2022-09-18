@@ -190,17 +190,21 @@ body {
   }
   .payBtn {
     background-color: #1c1c1c;
-    padding: 16px 32px;
+    padding: 16px;
     color: white;
     font-size: 16px;
     border: 1px solid #ffffff;
     border-radius: 8px;
+    margin-bottom: 8px;
     &:hover {
       border: 1px solid $primary;
       color: $primary;
     }
+    width: 140px;
     @include media-breakpoint-up(lg) {
+      padding: 16px 32px;
       margin-bottom: 32px;
+      width: auto;
     }
   }
 }
@@ -213,6 +217,8 @@ body {
     }
   }
   .btn {
+    display: block;
+    padding: 8px 16px;
     &:hover {
       transform: scale(1.1);
     }
@@ -221,6 +227,9 @@ body {
 
 input {
   padding: 8px 16px;
+}
+label {
+  color: #c1c1c1;
 }
 
 .form-control,
