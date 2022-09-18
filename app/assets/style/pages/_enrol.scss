@@ -140,7 +140,7 @@ body {
     height: 0;
     border-width: 12px 0 12px 12px;
     border-style: solid;
-    border-color: transparent transparent transparent red;
+    border-color: transparent transparent transparent #2d2d2d;
     @include media-breakpoint-up(md) {
       transform: rotate(0deg);
       top: calc(50%-12px);
@@ -162,6 +162,10 @@ body {
   }
   .courseEnrolInfo {
     background-color: #1c1c1c;
+    padding: 24px;
+    @include media-breakpoint-up(md) {
+      padding: 48px 32px;
+    }
     @include media-breakpoint-up(lg) {
       padding-left: 114px;
       padding-right: 32px;
@@ -179,20 +183,18 @@ body {
 // 付款方式
 .payMethod {
   flex-wrap: wrap;
-  @include media-breakpoint-up(lg) {
-    margin-right: 16px;
-  }
+
   h3 {
     color: #ffffff;
     font-size: $h6-font-size;
   }
   .payBtn {
-    padding: 16px;
+    background-color: #1c1c1c;
+    padding: 16px 32px;
     color: white;
+    font-size: 16px;
     border: 1px solid #ffffff;
     border-radius: 8px;
-    margin-right: 8px;
-    margin-bottom: 8px;
     &:hover {
       border: 1px solid $primary;
       color: $primary;
@@ -222,6 +224,7 @@ input {
 }
 
 .form-control,
+.form-label,
 .form-control:focus {
   border-color: #ffffff;
   background-color: transparent;
@@ -236,4 +239,10 @@ input {
 .datepicker-cell.selected:hover {
   background-color: #e8e8e8;
   color: #000;
+}
+
+// 改變日曆日期的文字顏色
+.datepicker-cell,
+.days-of-week .dow {
+  color: black;
 }
