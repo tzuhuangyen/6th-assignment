@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0";
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
-@import "https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
 @import "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css";
 @import "https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css";
@@ -34,7 +35,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-dark2: black;
-  --bs-font-sans-serif: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Noto Sans", "Azeret Mono", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(104deg, #62db54, #09acf5);
 }
@@ -652,7 +653,7 @@ progress {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1140px;
+    max-width: 1296px;
   }
 }
 
@@ -13184,6 +13185,14 @@ a {
   color: white;
 }
 
+ul li {
+  list-style: none;
+}
+
+.ff-AzeretMono {
+  font-family: "Azeret Mono";
+}
+
 .gradient-x {
   background-image: -webkit-gradient(linear, left top, right top, from(primary), to(#09acf5));
   background-image: -o-linear-gradient(left, primary 0%, #09acf5 100%);
@@ -13199,10 +13208,6 @@ a {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-}
-
-.text-white {
-  color: white;
 }
 
 .scroll {
@@ -13230,6 +13235,11 @@ header .logo:hover {
 header .menuBtn {
   width: 24px;
   height: 24px;
+  color: #ffffff;
+}
+
+header .nav-link {
+  color: white;
 }
 
 header:before {
@@ -13256,10 +13266,6 @@ header {
 
 header .container {
   margin: 0 auto;
-}
-
-.menuBtn {
-  color: #ffffff;
 }
 
 .dropdown {
@@ -13513,6 +13519,8 @@ header .container {
 .procedure .card-title {
   color: #62db54;
   font-size: 3rem;
+  font-family: "Azeret Mono";
+  font-weight: bold;
   top: -36px;
   left: 48px;
   background-color: #1c1c1c;
@@ -13625,6 +13633,7 @@ header .container {
   background-color: #2d2d2d;
   color: white;
   border-radius: 25px;
+  max-width: 306px;
   border: 1px solid transparent;
 }
 
