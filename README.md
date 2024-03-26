@@ -1,5 +1,7 @@
-# 網頁切版直播班 Gulp 範例 - 加入 Bootstrap 版本
+#此作品為六角學院提供設計範例來練習切版(web layout) 並使用 Gulp和Bootstrap來練習
+[https://tzuhuangyen.github.io/6th-assignment/index.html]
 
+## 網頁切版直播班 Gulp 範例 - 加入 Bootstrap 版本
 > 使用該專案 Gulp 時，就可以不用使用其他編譯工具編譯 SCSS 或是 JavaScript 囉。
 
 ## 指令列表
