@@ -1,4 +1,5 @@
-#此作品為六角學院提供設計範例來練習切版(web layout) 並使用 Gulp和Bootstrap來練習
+#此作品為六角學院提供設計範例來練習切版並使用 Gulp和Bootstrap來練習
+##coding 課程電商 web layout 平台
 [https://tzuhuangyen.github.io/6th-assignment/index.html]
 
 ## 網頁切版直播班 Gulp 範例 - 加入 Bootstrap 版本
